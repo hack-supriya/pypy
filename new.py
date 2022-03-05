@@ -1,2 +1,3 @@
 import crypt
-print(crypt.crypt("hi","$6$salt"))
+salt = crypt.mksalt(crypt.METHOD_SHA256)
+print(crypt.crypt("hello", salt)) 
